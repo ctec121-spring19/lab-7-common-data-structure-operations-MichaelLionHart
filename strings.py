@@ -14,8 +14,14 @@ def main():
     # create s2 using the input() function. Enter a string with at 
     #    least 3 words in it
     # your code below here
+    s1 = 'My name is Hart'
+    s2 = input('Please enter your name: ')
 
     # print both strings
+    print()
+    print(s1)
+    print()
+    print(s2)
 
 
     '''
@@ -31,6 +37,8 @@ def main():
     # the output line should contain the value of the index as well as 
     # the character
     # your code below here
+    for i in range(len(s1)):
+        x = print('position', i, ': ', s1[i])
 
 
     '''
@@ -43,10 +51,17 @@ def main():
     # the two slices
     #
     # form two new string variables using slicing on s1
+    name = s1[:11]
+    last = s1[11:]
 
     # create a third variable with the string you want to insert
+    first = 'Mike '
 
     # form a new string named "snew" using concatenation and print snew.
+    snew = name + first + last
+    print()
+    print(snew)
+    print()
 
 
     '''
@@ -58,12 +73,18 @@ def main():
     # use the find() method to find the index of the word to delete.
     # see https://docs.python.org/3/library/stdtypes.html#string-methods
     # find the index of the beginning of the word you want to delte
+    index = snew.index('Mike')
 
     # use the find() method to find the word after the one you are deleting.
+    lastWord = s1.find('Hart')
 
     # use the indexes to form two slices
+    snew1 = s1[0:index]
+    snew2 = s1[lastWord:]
 
     # use concatenation to form snew and print it
+    print(snew1 + snew2)
+    print()
 
 
     '''
@@ -72,6 +93,9 @@ def main():
     # one form of update is replacing an old word with a new word. This is
     # so common Python has a method for it. Use the replace() method to 
     # replace a word in s1. Assign the new string to snew and print it.
+    snew = snew.replace('Mike', 'Lion')
+    print(snew)
+    print()
 
 
     '''
@@ -80,8 +104,11 @@ def main():
     # in this section we will illustrate the split() method. This is a lead-in
     # to the next program file "lists.py"
     # Set variable named "l" to s1.split()
+    l = s1.split()
 
     # print l
+    print(l)
+    print()
 
 
-    main()
+main()
